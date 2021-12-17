@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <style>
+        canvas {
+            border: 1px solid black; 
+            display: block;
+            margin: 0 auto; 
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1000" height="500" ></canvas>
+</body>
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+
+
+    ctx.fillStyle = "rgb(0, 0, 0)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = 'green';
+    ctx.fillRect(450, 200, 100, 100);
+    ctx.clearRect(460, 210, 80, 80)
+
+</script>
+</html>
