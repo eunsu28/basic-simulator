@@ -1,9 +1,10 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
-ctx.fillStyle = 'green';
-ctx.fillRect(450, 200, 100, 100);
-ctx.clearRect(460, 210, 80, 80);
+ctx.fillStyle = 'brown';
+ctx.fillRect(0, 250, 1000, 500);
+
+//가운데다 화살표 만들기
 
 ctx.fillStyle = 'gray';
 ctx.beginPath();
