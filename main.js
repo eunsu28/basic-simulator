@@ -1,6 +1,6 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-const goundY = 250;
+const groundY = 250;
 let rightPressed = false;
 let leftPressed = false;
 
@@ -47,10 +47,10 @@ function draw(){
 
 
     if(rightPressed) {
-        goundY += 7;
+        groundY += 7;
     }
     else if(leftPressed) {
-        goundY -= 7;
+        groundY -= 7;
     }
 }
 
