@@ -10,6 +10,25 @@ ctx.fillRect(0, groundY, 1000, 500);
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
+function keyDownHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
+
 function draw(){
     ctx.lineWidth = 5;
     ctx.beginPath();
@@ -26,32 +45,13 @@ function draw(){
     ctx.ellipse(500, 500, 250, 150, 0, Math.PI, true);
     ctx.fill();
 
+}
 
-    function keyDownHandler(e) {
-        if(e.key == "Right" || e.key == "ArrowRight") {
-            rightPressed = true;
-        }
-        else if(e.key == "Left" || e.key == "ArrowLeft") {
-            leftPressed = true;
-        }
-    }
-
-    function keyUpHandler(e) {
-        if(e.key == "Right" || e.key == "ArrowRight") {
-            rightPressed = false;
-        }
-        else if(e.key == "Left" || e.key == "ArrowLeft") {
-            leftPressed = false;
-        }
-    }
-
-
-    if(rightPressed) {
-        groundY += 7;
-    }
-    else if(leftPressed) {
-        groundY -= 7;
-    }
+if(rightPressed) {
+    groundY += 7;
+}
+else if(leftPressed) {
+    groundY -= 7;
 }
 
 setInterval(10, draw)
