@@ -18,10 +18,10 @@ function keyDownHandler(e) {
 
 function keyUpHandler(e) {
     if(e.key == "Up" || e.key == "ArrowUp") {
-        rightPressed = false;
+        upPressed = false;
     }
     else if(e.key == "Down" || e.key == "ArrowDown") {
-        leftPressed = false;
+        downPressed = false;
     }
 }
 
@@ -46,9 +46,9 @@ function draw(){
     ctx.ellipse(500, 500, 250, 150, 0, Math.PI, true);
     ctx.fill();
 
-    if(upPressed) {
+    if(upPressed === true) {
         groundY += 7;
-    } else if(downPressed) {
+    } else if(downPressed === true) {
         groundY -= 7;
     }
 
