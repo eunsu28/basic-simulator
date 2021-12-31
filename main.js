@@ -8,10 +8,10 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
-    if(e.key == "Up" || e.key == "ArrowUp") {
+    if(e.key == "Up" || e.key == "ArrowRight") {
         upPressed = true;
     }
-    else if(e.key == "Down" || e.key == "ArrowDown") {
+    else if(e.key == "Down" || e.key == "ArrowLeft") {
         downPressed = true;
     }
 }
