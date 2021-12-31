@@ -4,6 +4,9 @@ let groundY = 250;
 let upPressed = false;
 let downPressed = false;
 
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
 function keyDownHandler(e) {
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = true;
@@ -45,14 +48,10 @@ function draw(){
 
     if(upPressed) {
         groundY += 7;
-    }
-    else if(downPressed) {
+    } else if(downPressed) {
         groundY -= 7;
     }
 
 }
 
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
-
-setInterval(draw, 10)
+setInterval(draw, 10);
