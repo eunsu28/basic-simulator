@@ -8,10 +8,10 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
-    if(e.key == "Up" || e.key == "ArrowRight") {
+    if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = true;
     }
-    else if(e.key == "Down" || e.key == "ArrowLeft") {
+    else if(e.key == "Down" || e.key == "ArrowDown") {
         downPressed = true;
     }
 }
@@ -54,5 +54,5 @@ function draw(){
 
 }
 
-setInterval(draw, 10);
+setInterval(draw, 1);
 //?
