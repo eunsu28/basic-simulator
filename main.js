@@ -51,9 +51,10 @@ function draw(){
     if(upPressed === true) {
         console.log(groundY)
         groundY -= 7;
-    } else if(downPressed === true) {
+    } 
+    if(downPressed === true) {
         console.log(groundY)
-        groundY += 7;
+        groundY = groundY + 7;
     }
 
 }
