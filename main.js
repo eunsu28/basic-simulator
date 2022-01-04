@@ -54,5 +54,17 @@ function draw(){
 
 }
 
+function check(e) {
+    var code = e.keyCode;
+    switch (code) {
+        case 37: alert("Left"); break; //Left key
+        case 38: alert("Up"); break; //Up key
+        case 39: alert("Right"); break; //Right key
+        case 40: alert("Down"); break; //Down key
+        default: alert(code); //Everything else
+    }
+}
+
+setInterval(check, 1)
 setInterval(draw, 1);
 //아래 화살표를 눌렀더니 위로 가는데 다시 안내려옴
