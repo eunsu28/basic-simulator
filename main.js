@@ -49,11 +49,11 @@ function draw(){
     ctx.fill();
 
     if(upPressed === true) {
-        console.log("move")
-        groundY += 7;
-    } else if(downPressed === true) {
-        console.log("move down")
+        console.log("up")
         groundY -= 7;
+    } else if(downPressed === true) {
+        console.log("down")
+        groundY += 7;
     }
 
 }
