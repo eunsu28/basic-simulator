@@ -59,4 +59,4 @@ function draw(){
 }
 
 setInterval(draw, 1);
-//아래 화살표를 눌렀더니 위로 가는데 다시 안내려옴
+//문제: 내려가는게 uppressed 임ㅋㅋㅋ
