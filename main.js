@@ -18,7 +18,7 @@ function keyDownHandler(e) {
 }
 
 function keyUpHandler(e) {
-    console.log("up")
+    console.log("unpressed")
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = false;
     }
@@ -29,6 +29,20 @@ function keyUpHandler(e) {
 
 
 function draw(){
+
+    if(upPressed === true) {
+        console.log(groundY)
+        groundY -= 7;
+        if (groundY < 0){
+            groundY = 0;
+        }
+    } else if(downPressed === true) {
+        console.log(groundY)
+        groundY += 7;
+        if (groundY + 500 > canvas.lenth){
+            groundY = canvas.length - 500;
+        }
+    }
 
     ctx.fillStyle = 'brown';
     ctx.fillRect(0, groundY, 1000, 500);
@@ -47,15 +61,6 @@ function draw(){
     ctx.beginPath();
     ctx.ellipse(500, 500, 250, 150, 0, Math.PI, true);
     ctx.fill();
-
-    if(upPressed === true) {
-        console.log(groundY)
-        groundY -= 7;
-    } 
-    if(downPressed === true) {
-        console.log(groundY)
-        groundY = groundY + 7;
-    }
 
 }
 
