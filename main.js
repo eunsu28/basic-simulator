@@ -8,6 +8,7 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 function keyDownHandler(e) {
+    console.log("pressed")
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = true;
     }
@@ -17,6 +18,7 @@ function keyDownHandler(e) {
 }
 
 function keyUpHandler(e) {
+    console.log("up")
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = false;
     }
@@ -47,8 +49,10 @@ function draw(){
     ctx.fill();
 
     if(upPressed === true) {
+        console.log("move")
         groundY += 7;
     } else if(downPressed === true) {
+        console.log("move down")
         groundY -= 7;
     }
 
