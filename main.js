@@ -49,14 +49,13 @@ function draw(){
     ctx.fill();
 
     if(upPressed === true) {
-        console.log("up")
+        console.log(groundY)
         groundY -= 7;
     } else if(downPressed === true) {
-        console.log("down")
+        console.log(groundY)
         groundY += 7;
     }
 
 }
 
 setInterval(draw, 1);
-//문제: 내려가는게 uppressed 임ㅋㅋㅋ
