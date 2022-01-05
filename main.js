@@ -38,9 +38,9 @@ function draw(){
         }
     } else if(downPressed === true) {
         console.log(groundY)
-        groundY += 7;
-        if (groundY + 500 > canvas.lenth){
-            groundY = canvas.length - 500;
+        groundY -= -7;
+        if (groundY + 500 > canvas.length){
+            groundY = 1000;
         }
     }
 
