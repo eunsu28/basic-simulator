@@ -30,18 +30,11 @@ function keyUpHandler(e) {
 
 function draw(){
 
-    if(upPressed === true) {
-        console.log(groundY)
+    if(upPressed) {
         groundY -= 7;
-        if (groundY < 0){
-            groundY = 0;
-        }
-    } else if(downPressed === true) {
-        console.log(groundY)
-        groundY -= -7;
-        if (groundY + 500 > canvas.length){
-            groundY = 1000;
-        }
+    }
+    else if(downPressed) {
+        groundY += 7;
     }
 
     ctx.fillStyle = 'brown';
@@ -64,4 +57,4 @@ function draw(){
 
 }
 
-setInterval(draw, 1);
+setInterval(draw, 10);
