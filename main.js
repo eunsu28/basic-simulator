@@ -1,12 +1,17 @@
+//
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let groundY = (canvas.height - 250);
 let upPressed = false;
 let downPressed = false;
+//
 
+//
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+//
 
+//
 function keyDownHandler(e) {
     console.log("pressed")
     if(e.key == "Up" || e.key == "ArrowUp") {
@@ -38,6 +43,7 @@ function ground() {
 function draw(){
     ground()
 
+//problem    
     if(upPressed) {
         groundY -= 7;
     }
@@ -45,6 +51,7 @@ function draw(){
         console.log("problem")
         groundY += 7;
     }
+//
 
     ctx.lineWidth = 5;
     ctx.beginPath();
@@ -62,12 +69,16 @@ function draw(){
     ctx.fill();
 
 }
+//
 
+//
 // function add() {
 //     groundY -= 1
 // }
+//
 
+//
 ground()
-
 setInterval(draw, 10);
 // setInterval(add, 100)
+//
