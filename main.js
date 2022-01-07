@@ -57,4 +57,10 @@ function draw(){
 
 }
 
+function add() {
+    groundY -= 1
+}
+
 setInterval(draw, 10);
+
+setInterval(add, 100)
