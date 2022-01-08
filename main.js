@@ -12,6 +12,14 @@ document.addEventListener("keyup", keyUpHandler, false);
 //
 
 //
+function finish() {
+    groundY = 250;
+    upPressed = false;
+    downPressed = false;
+}
+//
+
+//
 function keyDownHandler(e) {
     console.log("pressed")
     if(e.key == "Up" || e.key == "ArrowUp") {
@@ -34,7 +42,7 @@ function keyUpHandler(e) {
 
 function ground() {
     ctx.beginPath();
-    ctx.rect(0, groundY, 1000, 250);
+    ctx.rect(0, groundY, 1000, 500);
     ctx.fillStyle = "brown";
     ctx.fill();
     ctx.closePath();
@@ -47,10 +55,17 @@ function draw(){
 //problem    
     if(upPressed) {
         groundY -= 7;
+        if (groundY < 0){
+            alert("gameover")
+            finish()
+        }
     }
     else if(downPressed) {
         console.log("problem")
         groundY += 7;
+        if (groundY > 750){
+            groundY = 500;
+        }
     }
 //
 
