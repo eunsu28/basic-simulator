@@ -34,7 +34,7 @@ function keyUpHandler(e) {
 
 function ground() {
     ctx.beginPath();
-    ctx.rect(0, groundY, 1000, 500);
+    ctx.rect(0, groundY, 1000, 250);
     ctx.fillStyle = "brown";
     ctx.fill();
     ctx.closePath();
