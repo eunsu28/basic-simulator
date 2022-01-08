@@ -88,13 +88,13 @@ function draw(){
 //
 
 //
-// function add() {
-//     groundY -= 1
-// }
+function add() {
+    groundY -= 1
+}
 //
 
 //
 ground()
 setInterval(draw, 10);
-// setInterval(add, 100)
+setInterval(add, 100)
 //
