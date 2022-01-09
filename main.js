@@ -57,17 +57,17 @@ function draw(){
     ground()
 
     if(upPressed) {
-        groundY -= 7;
+        groundY -= 3;
         if (groundY < 0){
             alert("gameover")
-            finish()
+            finish();
         }
     }
     else if(downPressed) {
-        console.log("problem")
-        groundY += 7;
-        if (groundY > 750){
-            groundY = 500;
+        groundY += 3;
+        if (groundY > 500){
+            alert("gameover");
+            finish();
         }
     }
 
@@ -91,7 +91,7 @@ function draw(){
 
 // function to change y always
 function add() {
-    groundY -= Math.random() * (10 - 1) + 1; // today's goal make this 1 random between 1 ~ 10
+    groundY -= Math.random() * (10 - 1) + 1; // use Math modlue to make random
 }
 //
 
