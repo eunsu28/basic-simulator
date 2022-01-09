@@ -1,4 +1,4 @@
-//
+// main setting
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let groundY = (canvas.height - 250);
@@ -6,12 +6,12 @@ let upPressed = false;
 let downPressed = false;
 //
 
-//
+// event listeners
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 //
 
-//
+// finish function to reset the game
 function finish() {
     groundY = 250;
     upPressed = false;
@@ -19,7 +19,7 @@ function finish() {
 }
 //
 
-//
+// when key down
 function keyDownHandler(e) {
     console.log("pressed")
     if(e.key == "Up" || e.key == "ArrowUp") {
@@ -30,6 +30,7 @@ function keyDownHandler(e) {
     }
 }
 
+// when key is up
 function keyUpHandler(e) {
     console.log("unpressed")
     if(e.key == "Up" || e.key == "ArrowUp") {
@@ -39,7 +40,9 @@ function keyUpHandler(e) {
         downPressed = false;
     }
 }
+//
 
+//draw ground part (brown part)
 function ground() {
     ctx.beginPath();
     ctx.rect(0, groundY, 1000, 500);
@@ -48,11 +51,11 @@ function ground() {
     ctx.closePath();
 }
 
+//main function draw every thing
 function draw(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height); //<= important
     ground()
 
-//problem    
     if(upPressed) {
         groundY -= 7;
         if (groundY < 0){
@@ -67,7 +70,6 @@ function draw(){
             groundY = 500;
         }
     }
-//
 
     ctx.lineWidth = 5;
     ctx.beginPath();
@@ -87,14 +89,14 @@ function draw(){
 }
 //
 
-//
+// function to change y always
 function add() {
-    groundY -= 1
+    groundY -= 1; // today's goal make this 1 random between 1 ~ 10
 }
 //
 
-//
-ground()
-setInterval(draw, 10);
-setInterval(add, 100)
+// start every thing
+ground(); // to draw thing at first
+setInterval(draw, 10); // start
+setInterval(add, 100); // start to add
 //
