@@ -91,7 +91,7 @@ function draw(){
 
 // function to change y always
 function add() {
-    groundY -= 1; // today's goal make this 1 random between 1 ~ 10
+    groundY -= Math.random() * (10 - 1) + 1; // today's goal make this 1 random between 1 ~ 10
 }
 //
 
