@@ -58,17 +58,9 @@ function draw(){
 
     if(upPressed) {
         groundY -= 3;
-        if (groundY < 0){
-            alert("gameover")
-            finish();
-        }
     }
     else if(downPressed) {
         groundY += 3;
-        if (groundY > 500){
-            alert("gameover");
-            finish();
-        }
     }
 
     ctx.lineWidth = 5;
@@ -91,7 +83,10 @@ function draw(){
         finish();
     }
 
-
+    if (groundY > 500){
+        alert("gameover");
+        finish();
+    }
 
 }
 //
