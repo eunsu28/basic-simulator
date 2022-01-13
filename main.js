@@ -97,19 +97,22 @@ function add() {
 }
 //
 
-// start every thing
-ground(); // to draw thing at first
-setInterval(draw, 10); // start
-setInterval(add, 100); // start to add
+//
+draw()
 //
 
 //=================================================//
 const button = document.querySelector("#button");
-let num = 1;
+let num = 0;
 
 function startOrStop(){
+    num += 1;
     if(num === 1){
-        
+        ground(); // to draw thing at first
+        setInterval(draw, 10); // start
+        setInterval(add, 100); // start to add
+    } else if(num === 2) {
+        window.location.reload(); //refresh the page
     }
 }
 
