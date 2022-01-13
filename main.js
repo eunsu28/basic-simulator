@@ -97,14 +97,16 @@ function add() {
 }
 //
 
-//
+//draw before everything start
 draw()
 //
 
-//=================================================//
+//=================================================// button thing
 const button = document.querySelector("#button");
 let num = 0;
+//
 
+//
 function startOrStop(){
     num += 1;
     if(num === 1){
@@ -115,5 +117,8 @@ function startOrStop(){
         window.location.reload(); //refresh the page
     }
 }
+//
 
+//
 addEventListener("click", startOrStop);
+//
