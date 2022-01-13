@@ -102,3 +102,15 @@ ground(); // to draw thing at first
 setInterval(draw, 10); // start
 setInterval(add, 100); // start to add
 //
+
+//=================================================//
+const button = document.querySelector("#button");
+let num = 1;
+
+function startOrStop(){
+    if(num === 1){
+        
+    }
+}
+
+addEventListener("click", startOrStop);
