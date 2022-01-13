@@ -86,6 +86,13 @@ function draw(){
     ctx.ellipse(500, 500, 250, 150, 0, Math.PI, true);
     ctx.fill();
 
+    if (groundY < 0){
+        alert("gameover")
+        finish();
+    }
+
+
+
 }
 //
 
