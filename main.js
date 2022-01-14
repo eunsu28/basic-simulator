@@ -57,10 +57,10 @@ function draw(){
     ground()
 
     if(upPressed) {
-        groundY -= 3;
+        groundY -= 1;
     }
     else if(downPressed) {
-        groundY += 3;
+        groundY += 1;
     }
 
     ctx.lineWidth = 5;
@@ -93,7 +93,7 @@ function draw(){
 
 // function to change y always
 function add() {
-    groundY -= Math.random() * (10 - 1) + 1; // use Math modlue to make random
+    groundY -= Math.random() * (1 - 0.01) + 0.01; // use Math modlue to make random
 }
 //
 
