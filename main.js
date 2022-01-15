@@ -106,7 +106,7 @@ const button = document.querySelector("#button");
 let num = 0;
 //
 
-//
+// function to control stop and start
 function startOrStop(){
     num += 1;
     if(num === 1){
@@ -119,6 +119,6 @@ function startOrStop(){
 }
 //
 
-//
+// event lister
 addEventListener("click", startOrStop);
 //
