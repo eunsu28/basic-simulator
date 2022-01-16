@@ -21,7 +21,7 @@ function finish() {
 
 // when key down
 function keyDownHandler(e) {
-    console.log("pressed")
+    console.log("pressed");
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = true;
     }
@@ -32,7 +32,7 @@ function keyDownHandler(e) {
 
 // when key is up
 function keyUpHandler(e) {
-    console.log("unpressed")
+    console.log("unpressed");
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = false;
     }
@@ -54,7 +54,7 @@ function ground() {
 //main function draw every thing
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height); //<= important
-    ground()
+    ground();
 
     if(upPressed) {
         groundY -= 1;
@@ -79,7 +79,7 @@ function draw(){
     ctx.fill();
 
     if (groundY < 0){
-        alert("gameover")
+        alert("gameover");
         finish();
     }
 
@@ -98,7 +98,7 @@ function add() {
 //
 
 //draw before everything start
-draw()
+draw();
 //
 
 //=================================================// button thing
