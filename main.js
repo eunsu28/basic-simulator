@@ -21,7 +21,6 @@ function finish() {
 
 // when key down
 function keyDownHandler(e) {
-    console.log("pressed");
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = true;
     }
@@ -32,7 +31,6 @@ function keyDownHandler(e) {
 
 // when key is up
 function keyUpHandler(e) {
-    console.log("unpressed");
     if(e.key == "Up" || e.key == "ArrowUp") {
         upPressed = false;
     }
