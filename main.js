@@ -51,16 +51,21 @@ function ground() {
 
 //main function draw every thing
 function draw(){
+    //
     ctx.clearRect(0, 0, canvas.width, canvas.height); //<= important
     ground();
+    //
 
+    //
     if(upPressed) {
         groundY -= 1;
     }
     else if(downPressed) {
         groundY += 1;
     }
+    //
 
+    //
     ctx.lineWidth = 5;
     ctx.beginPath();
     ctx.moveTo(450, 250);
@@ -75,7 +80,9 @@ function draw(){
     ctx.beginPath();
     ctx.ellipse(500, 500, 250, 150, 0, Math.PI, true);
     ctx.fill();
+    //
 
+    //
     if (groundY < 0){
         alert("gameover");
         finish();
@@ -85,6 +92,7 @@ function draw(){
         alert("gameover");
         finish();
     }
+    //
 
 }
 //
