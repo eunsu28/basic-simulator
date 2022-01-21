@@ -51,12 +51,12 @@ function ground() {
 
 //main function draw every thing
 function draw(){
-    //
+    // draw ctx
     ctx.clearRect(0, 0, canvas.width, canvas.height); //<= important
     ground();
     //
 
-    //
+    // when button pressed
     if(upPressed) {
         groundY -= 1;
     }
@@ -65,7 +65,7 @@ function draw(){
     }
     //
 
-    //
+    // draw main things
     ctx.lineWidth = 5;
     ctx.beginPath();
     ctx.moveTo(450, 250);
@@ -75,20 +75,22 @@ function draw(){
     ctx.moveTo(500, 200);
     ctx.lineTo(500, 300);
     ctx.stroke();
+    //
 
+    // draw 타원
     ctx.fillStyle = 'gray';
     ctx.beginPath();
     ctx.ellipse(500, 500, 250, 150, 0, Math.PI, true);
     ctx.fill();
     //
 
-    //
-    if (groundY < 0){
+    // to finish the game
+    if (groundY < 0){ // up
         alert("gameover");
         finish();
     }
 
-    if (groundY > 500){
+    if (groundY > 500){ //donw
         alert("gameover");
         finish();
     }
