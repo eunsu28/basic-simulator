@@ -101,7 +101,7 @@ function draw(){
 
 // function to change y always
 function add() {
-    groundY -= Math.random() * (1 - 0.01); // use Math modlue to make random
+    groundY -= Math.random() * (5 - 0.01); // use Math modlue to make random
 }
 //
 
